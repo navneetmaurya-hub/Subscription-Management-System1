@@ -6,7 +6,7 @@ const startJobs = require('./jobs');
 (async () => {
   await connectDB();
   startJobs();
-  app.listen(port, () => console.log(`API running on http://localhost:${port}`));
+  app.listen(port, '0.0.0.0', () => console.log(`API running on http://localhost:${port}`));
 })().catch((err) => {
   console.error('Startup failed:', err);
   process.exit(1);

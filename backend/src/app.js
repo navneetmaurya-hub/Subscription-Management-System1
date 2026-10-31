@@ -10,7 +10,18 @@ const { notFound, errorHandler } = require('./middleware/errorHandler');
 
 const app = express();
 app.use(helmet());
-app.use(cors({ origin: clientUrl, credentials: true }));
+const allowedOrigins = [clientUrl, 'http://localhost:5173', 'http://127.0.0.1:5173'].filter(Boolean);
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin) || nodeEnv === 'development') {
+        return callback(null, true);
+      }
+      callback(new Error('Blocked by CORS'));
+    },
+    credentials: true,
+  })
+);
 app.use(compression());
 app.use(express.json({ limit: '1mb' }));
 if (nodeEnv !== 'test') app.use(morgan('dev'));

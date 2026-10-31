@@ -8,3 +8,4 @@ export const subscriptionsApi = {
     update: (id, data) => api.put(`/subscriptions/${id}`, data),
     changeStatus: (id, status) => api.patch(`/subscriptions/${id}/status`, { status }),
 };
+

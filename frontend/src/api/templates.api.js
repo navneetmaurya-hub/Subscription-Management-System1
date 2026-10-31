@@ -7,3 +7,4 @@ export const templatesApi = {
     update: (id, data) => api.put(`/quotation-templates/${id}`, data),
     delete: (id) => api.delete(`/quotation-templates/${id}`),
 };
+

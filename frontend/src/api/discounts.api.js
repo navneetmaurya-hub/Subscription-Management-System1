@@ -7,3 +7,4 @@ export const discountsApi = {
     update: (id, data) => api.put(`/discounts/${id}`, data),
     delete: (id) => api.delete(`/discounts/${id}`),
 };
+

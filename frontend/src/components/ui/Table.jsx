@@ -38,3 +38,4 @@ export default function Table({ columns = [], data = [], keyField = '_id', onRow
         </div>
     );
 }
+

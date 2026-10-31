@@ -5,3 +5,4 @@ export function formatCurrency(amount = 0, currency = 'USD') {
         minimumFractionDigits: 2,
     }).format(amount || 0);
 }
+

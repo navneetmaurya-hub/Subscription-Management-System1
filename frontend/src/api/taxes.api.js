@@ -7,3 +7,4 @@ export const taxesApi = {
     update: (id, data) => api.put(`/taxes/${id}`, data),
     delete: (id) => api.delete(`/taxes/${id}`),
 };
+

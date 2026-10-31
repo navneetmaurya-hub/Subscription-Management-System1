@@ -8,3 +8,4 @@ export const invoicesApi = {
     changeStatus: (id, status) => api.patch(`/invoices/${id}/status`, { status }),
     send: (id) => api.post(`/invoices/${id}/send`),
 };
+

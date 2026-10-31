@@ -5,3 +5,4 @@ export const usersApi = {
     createStaff: (data) => api.post('/users/staff', data),
     setActive: (id, isActive) => api.patch(`/users/${id}/active`, { isActive }),
 };
+

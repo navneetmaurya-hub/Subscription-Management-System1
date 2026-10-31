@@ -41,3 +41,4 @@ export const PRODUCT_TYPES = [
     { label: 'Service / Support', value: 'service' },
     { label: 'Physical Goods', value: 'goods' },
 ];
+
